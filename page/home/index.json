@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#53D7F1",
+  "navigationBarTitleText": "静听真心话",
+  "navigationBarTextStyle": "#fff",
+  "usingComponents": {
+    "ChatView" : "/components/chatView/index",
+    "OptionView": "/components/optionView/index"
+  }
+}

@@ -1,0 +1,44 @@
+<!--问题-->
+<view wx:if="{{item.isQuestion}}">
+  <view class="chat-view-box {{directionObj.direction}}">
+    <view class="talk-box" style="font-weight:600;font-size:36rpx">{{item.text}}</view>
+    <view style="{{directionObj.triangleStyle}}" class="triangle_border {{directionObj.triangle}}"></view>
+    <view class="header-icon-box" bindtap="showName">
+      <image src="{{item.iconUrl}}" />
+    </view>
+  </view>
+  <!-- <view wx:if="{{!item.isOwner}}" class="reply-container">
+    <view class="anonymous" wx:if="{{item.isAnonymous}}">看看是谁</view>
+    <view class="anonymous" wx:else>{{item.nickName}}</view>
+    <view class="reply-box" wx:if="{{!item.isAnonymous && !item.isQuestion}}">
+      <view class="reply-btn">回话Ta</view>
+      <view class="reply-anonymous-btn">匿名撩Ta</view>
+    </view>
+  </view> -->
+</view>
+<!--回答-->
+<view wx:else>
+  <view class="chat-view-box {{directionObj.direction}}">
+    <view class="header-icon-box" bindtap="showName">
+      <image src="{{item.iconUrl}}" />
+      <view class="anonymous" wx:if="{{item.isAnonymous}}">看看是谁</view>
+      <view class="anonymous" wx:else>{{item.nickName}}</view>
+    </view>
+    <view style="{{directionObj.triangleStyle}}" class="triangle_border {{directionObj.triangle}}"></view>
+    <view class="talk-box">{{item.text}}</view>
+    <!-- <view class="close-box">
+      <image src="../../image/close.png" />
+    </view> -->
+  </view>
+  <view wx:if="{{!item.isOwner}}" class="reply-container">
+    <view class="reply-box" wx:if="{{!item.isAnonymous && !item.isQuestion}}">
+      <view class="reply-btn" data-answerState="0" bindtap="answerVisitor">回话Ta</view>
+      <view class="reply-anonymous-btn"data-answerState="1" bindtap="answerVisitor">匿名撩Ta</view>
+    </view>
+  </view>
+</view>
+
+<view class="answer_Box" wx:if="{{showAnswerBox}}">
+  <input type="text" placeholder="请输入你的回复……" class="answer_input"></input>
+  <view class="answer_btn">{{answerstate==0?"回复Ta":"匿名回复"}}</view>
+</view>

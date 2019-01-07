@@ -1,0 +1,16 @@
+<view class="modal-view-box" wx:if="{{optionModalStatus}}">
+  <view class="modal-content-box">
+    <view class="option-input">
+      <input placeholder="请选择或输入你的问题" />
+    </view>
+    <view class="option-content-box">
+      <view wx:for="{{options}}" wx:key="option" data-index="{{index}}" style="color: {{index === currentIndex?'#53D7F1':''}}" bindtap="chooseOption">
+        {{index+1}}. {{item}}
+      </view>
+    </view>
+    <view class="btn-box">
+      <view class="give-up-btn" catchtap="hideOption">算了</view>
+      <view class="confirm-btn">确定</view>
+    </view>
+  </view>
+</view>

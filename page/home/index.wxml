@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="hearder-box">
+    <view class='header-left-box'>
+      <view class="music-box">
+        <image src="/image/yinyue.png" />
+      </view>
+      <view class="share-box">
+        <image src="/image/kefu.png" />
+      </view>
+    </view>
+    <view>
+      <view class='question-record'>提问记录</view>
+    </view>
+  </view>
+  <view class="{{showAnserBoxHome?'act_content-box':'content-box'}}">
+    <ChatView wx:for="{{arr}}" wx:key="arr" item="{{item}}" bindanswerVisitor="showAnswerBox" bindshowName="homeSharePop"/>
+    <view class="tips-word" wx:if="{{arr.length === 1}}">你的问题还没有朋友来回答</view>
+  </view>
+  <view class="footer-box" wx:if="{{isOwner}}">
+    <view class="reset-btn" bindtap="resetAction">重新设置问题</view>
+    <view class="show-btn">看看Ta是谁</view>
+    <!-- <button open-type='getUserInfo' bindgetuserinfo="onGotUserInfo" >获取用户信息</button> -->
+  </view>
+  <view class="footer-box-visitor" wx:else>
+    <form bindsubmit="formSubmit" report-submit="true">
+      <view class="visitor-answer-box">
+        <view class="reply-img">
+          <image src="../../image/niming.png"></image>
+        </view>
+        <input class='reply-input' name='answer' placeholder="请输入你的回答" />
+        <button class='reply-btn' formType="submit">发送</button>
+      </view>
+    </form>
+    <view class="make-btn">生成我的真心话</view>
+  </view>
+</view>
+<OptionView options="{{options}}" bindhideOption="hideOption" optionModalStatus="{{optionModalStatus}}" />
+
+<view class="share_Box" wx:if="{{showSharePop}}" bindtap="homeSharePop">
+    <view class="mask"></view>
+    <view class="share_content">
+      <text>快来分享给你的好友吧，解锁TA的头像~</text>
+      <view class="share_ok">好哒</view>
+    </view>
+</view>

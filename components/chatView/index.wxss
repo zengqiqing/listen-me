@@ -1,0 +1,127 @@
+.flex-reverse {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.flex-row {
+  flex-direction: row;
+  align-items: center;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.flex-column {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-view-box {
+  display: flex;
+  padding: 0 20rpx;
+  /* margin: 26rpx 0; */
+  /* align-items: center; */
+}
+
+.header-icon-box {
+  text-align: center;
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.header-icon-box image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.talk-box {
+  background: #F9D76B;
+  color: #333333;
+  padding: 20rpx 30rpx;
+  margin: 20rpx;
+  border-radius: 12rpx;
+}
+
+.left {
+  border-width:20rpx 20rpx 20rpx 0;
+  border-color:transparent #F9D76B transparent;
+}
+.down {
+  border-width:20rpx 20rpx 0;
+  border-color: #F9D76B transparent transparent;
+}
+.right {
+  border-width:20rpx;
+  border-color: transparent transparent transparent #F9D76B;
+}
+
+.triangle_border{
+  width:0;
+  height:0;
+  border-style:solid;
+  position: relative;
+}
+.anonymous {
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 26rpx;
+  width: 90rpx;
+  text-align: center
+}
+.reply-container {
+  padding: 0 110rpx 0;
+  display: flex;
+}
+
+.reply-box {
+  padding: 0 20rpx;
+  display: flex;
+  align-items: flex-start;
+}
+
+.reply-box > view {
+  padding: 8rpx 20rpx;
+  border-radius: 0 40rpx 40rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.reply-btn {
+  background: #ff5d8e;
+  color: #fdfe8a;
+}
+
+.reply-anonymous-btn {
+  color: #ff5d8e;
+  background: #ffffff;
+}
+
+.close-box > image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.answer_Box{
+  display: flex;
+  padding: 22rpx;
+  position: fixed;
+  bottom: 52px;
+  z-index: 1;
+}
+.answer_input{
+  width: 200px;
+  height: 45px;
+  background: #fff;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+}
+.answer_btn{
+  padding: 20rpx 40rpx;
+  background: #F9D76B;
+  margin-left: 62rpx;
+  border-radius: 12rpx;
+  box-shadow:3px 4px 5px #888888;
+}
+.talk_BigBox{
+  display: flex;
+  position: relative;
+}

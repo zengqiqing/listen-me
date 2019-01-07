@@ -1,0 +1,158 @@
+.container {
+  background: #53D7F1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+/*头部*/
+.hearder-box {
+  padding: 10rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header-left-box {
+  display: flex;
+}
+.music-box, .share-box {
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.share-box {
+  background: #2cbbdd;
+}
+.music-box {
+  background: #ff5d8e;
+}
+.music-box, .share-box {
+  margin: 10rpx;
+}
+.share-box, .share-box image, .music-box, .music-box image {
+  width: 28px;
+  height: 28px;
+}
+.question-record {
+  color: #ffffff;
+  background: rgb(26, 76, 88);
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+}
+/*中间*/
+.content-box {
+  background: #53D7F1;
+  flex: 1;
+  overflow: auto;
+}
+.act_content-box{
+  background: #53D7F1;
+  flex: 1;
+  overflow: auto;
+  padding-bottom: 100rpx;
+}
+.tips-word {
+  color: #ffffff;
+  text-align: center;
+  font-size: 36rpx;
+  margin: 30rpx 0;
+}
+
+/*底部*/
+.footer-box {
+  width: 100%;
+  color: #ffffff;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx;
+}
+
+.footer-box view {
+  padding: 20rpx 0;
+  box-shadow: 0 0 4rpx #999;
+  width: 260rpx;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.footer-box-visitor {
+  padding: 20rpx;
+  width: 100%;
+  color: #ffffff;
+  box-sizing: border-box;
+  background: #53D7F1;
+}
+
+.footer-box-visitor > view {
+  padding: 20rpx 0;
+  box-shadow: 0 0 4rpx #999;
+  text-align: center;
+  border-radius: 8rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.reset-btn, .reply-btn {
+  background: #00d195;
+}
+button::after {
+  border: none;
+}
+.reply-btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1;
+  padding: 16rpx 26rpx;
+}
+.visitor-answer-box {
+  display: flex;
+  align-items: center;
+}
+.reply-img > image {
+  height: 90rpx;
+  width: 90rpx;
+}
+.show-btn, .make-btn {
+  background: #ff5d8e;
+}
+.reply-input {
+  background: #ffffff;
+  padding: 8rpx;
+  border-radius: 8rpx;
+  margin: 0 20rpx;
+  flex: 1;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: #999;
+  opacity: 0.6;
+}
+.share_content{
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  padding: 30rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 27rpx;
+  border-radius: 15rpx;
+}
+
+.share_ok{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  background: green;
+  color: #fff;
+  margin: 50rpx auto 10rpx auto;
+}
